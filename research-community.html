@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Research Submissions | Project Free Earth</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand-wrap">
+        <img src="project_green_earth.png" alt="Project Free Earth logo" class="brand-logo" />
+        <h1>Project Free Earth</h1>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="papers.html">Library</a>
+        <a href="research-community.html">Send Your Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Environmental Research Initiative</p>
+        <h2>We want people to contribute their research, stories, and ideas.</h2>
+        <p class="hero-text">This page creates a simple submission experience for contributors while giving you a review queue so you can approve or reject posts before they become part of the site.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#submission-form">Submit Content</a>
+          <a class="button button-secondary" href="#review-board">Review Queue</a>
+        </div>
+      
+    </section>
+
+    <section class="section card" id="submission-form-section">
+      <h2>Submit a paper, story, or research idea</h2>
+      <p>Use this form to collect community submissions. The content will be added to your review board and will not appear publicly until you approve it.</p>
+      <form id="submission-form" class="submission-form">
+        <div class="form-grid">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Title</span>
+            <input type="text" name="title" required />
+          </label>
+          <label>
+            <span>Content type</span>
+            <select name="type">
+              <option>Paper</option>
+              <option>Story</option>
+              <option>Research Note</option>
+              <option>Educational Resource</option>
+            </select>
+          </label>
+          <label>
+            <span>Category</span>
+            <select name="category">
+              <option>Research</option>
+              <option>Education</option>
+              <option>Climate Action</option>
+              <option>Community Impact</option>
+            </select>
+          </label>
+          <label>
+            <span>Link to resource</span>
+            <input type="url" name="link" placeholder="https://" />
+          </label>
+        </div>
+        <label>
+          <span>Summary</span>
+          <textarea name="summary" rows="5" required></textarea>
+        </label>
+        <button class="button button-primary" type="submit">Send for Review</button>
+        <p id="submission-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section card">
+      <h2>My research submissions</h2>
+      <p>Sign in with your email and password to view the status of the stories or papers you submitted.</p>
+      <form id="contributor-login-form" class="admin-login-form">
+        <label>
+          <span>Email address</span>
+          <input type="email" name="email" placeholder="hswan002@odu.edu" required />
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Enter password" required />
+        </label>
+        <button class="button button-secondary" type="submit">View my submissions</button>
+        <button class="button button-secondary" type="button" id="contributor-logout">Log out</button>
+      </form>
+      <p id="contributor-status" class="form-message" aria-live="polite"></p>
+      <div id="my-submissions-list" class="review-list"></div>
+    </section>
+
+    <section class="section card" id="review-board">
+      <h2>Research review queue</h2>
+      <p>Pending items are waiting for your review. Approved items can be featured publicly, while rejected submissions are kept out of the published library.</p>
+      <form id="admin-login-form" class="admin-login-form">
+        <label>
+          <span>Admin access password</span>
+          <input type="password" id="admin-password" name="adminPassword" placeholder="Enter password" />
+        </label>
+        <button class="button button-secondary" type="submit">Unlock review tools</button>
+        <p id="admin-status" class="form-message" aria-live="polite"></p>
+      </form>
+      <div class="review-board-grid">
+        <div>
+          <h3>Pending</h3>
+          <div id="pending-list" class="review-list"></div>
+        </div>
+        <div>
+          <h3>Approved</h3>
+          <div id="approved-list" class="review-list"></div>
+        </div>
+        <div>
+          <h3>Rejected</h3>
+          <div id="rejected-list" class="review-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Project Free Earth</p>
+        <p>A professional research submission platform that allows community voices to contribute while keeping review and approval in your hands.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="papers.html">Library</a>
+        </div>
+        <div>
+          <h4>Community</h4>
+          <a href="research-community.html">Submissions</a>
+          <a href="about.html#connect">Connect</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="problems-mitigation.html">Solutions</a>
+          <a href="about.html#research-tab">Research Library</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Project Free Earth</span>
+      <span>Research • Education • Community</span>
+    </div>
+  </footer>
+
+  <script src="transition.js"></script>
+  <script src="research-submissions.js"></script>
+</body>
+</html>
